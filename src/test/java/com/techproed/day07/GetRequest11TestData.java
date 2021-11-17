@@ -46,7 +46,10 @@ public class GetRequest11TestData extends JsonPlaceHolderTestBase {
         Assert.assertEquals(expectedData.get("title"), jsonPath.getString("title"));
         Assert.assertEquals(expectedData.get("completed"), jsonPath.getBoolean("completed"));
 //3.Yontem
-// object mapper
-        // pojo class ile birlikte maplari kullancaz
+        HashMap<String,Object> actualData=response.as(HashMap.class);
+        Assert.assertEquals(expectedData.get("userId"),actualData.get("userId"));
+        Assert.assertEquals(expectedData.get("title"),actualData.get("title"));
+        Assert.assertEquals(expectedData.get("completed"),actualData.get("completed"));
+
     }
 }
