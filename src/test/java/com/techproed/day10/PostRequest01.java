@@ -45,5 +45,6 @@ public class PostRequest01 extends DummyTestBase {
         Assert.assertEquals(expectedDataMap.get("statusCode"),response.getStatusCode());
         Assert.assertEquals(expectedDataMap.get("status"),actualDataMap.get("status"));
         Assert.assertEquals(expectedDataMap.get("message"),actualDataMap.get("message"));
+
     }
 }
